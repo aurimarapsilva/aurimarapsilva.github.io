@@ -1,11 +1,51 @@
+/* Soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial;
-  background: #e67e22;
-  text-align: center;
+  background: #f1faee;
+  background-size: auto 100vh; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  height: 100vh;
+}
+
+/* Para tela menor igual a  400px*/
+@media (min-width: 400px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200) {
+  body {
+    font-size: 16px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
-  background-color: white;
+  background-color: #c9e7e7;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu ul {
@@ -17,21 +57,75 @@ body {
   list-style: none;
 }
 
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
 a {
-  color: teal;
+  color: #000b1f;
   text-decoration: none;
 }
 
+/*
 a:hover {
   text-decoration: underline;
 }
+*/
 
 .site-subtitle,
 .site-title {
-  color: whitesmoke;
+  color: #1d3557;
+  font-family: 'Source Code Pro', monospace;
   text-align: center;
 }
 
+.site-title {
+  font-size: 2.6em;
+}
+
 .site-subtitle {
-  font-style: italic;
+  line-height: 1.8em;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  color: #1d3557;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width:  180px;
 }
